@@ -33,7 +33,11 @@ describe('pubsub', function () {
     'publish from Go, subscribe on Go': [() => daemonFactory.spawn({ ...daemonOptions, type: 'go' }), () => daemonFactory.spawn({ ...daemonOptions, type: 'go' })],
     'publish from JS, subscribe on JS': [() => daemonFactory.spawn({ type: 'js' }), () => daemonFactory.spawn({ type: 'js' })],
     'publish from JS, subscribe on Go': [() => daemonFactory.spawn({ type: 'js' }), () => daemonFactory.spawn({ ...daemonOptions, type: 'go' })],
-    'publish from Go, subscribe on JS': [() => daemonFactory.spawn({ ...daemonOptions, type: 'go' }), () => daemonFactory.spawn({ type: 'js' })]
+    'publish from Go, subscribe on JS': [() => daemonFactory.spawn({ ...daemonOptions, type: 'go' }), () => daemonFactory.spawn({ type: 'js' })],
+    'publish from Go, subscribe on Rust': [() => daemonFactory.spawn({ ...daemonOptions, type: 'go' }), () => daemonFactory.spawn({ type: 'rust' })],
+    'publish from JS, subscribe on Rust': [() => daemonFactory.spawn({ ...daemonOptions, type: 'js' }), () => daemonFactory.spawn({ type: 'rust' })],
+    'publish from Rust, subscribe on JS': [() => daemonFactory.spawn({ ...daemonOptions, type: 'rust' }), () => daemonFactory.spawn({ type: 'js' })],
+    'publish from Rust, subscribe on Go': [() => daemonFactory.spawn({ ...daemonOptions, type: 'rust' }), () => daemonFactory.spawn({ type: 'go' })]
   }
 
   Object.keys(tests).forEach((name) => {

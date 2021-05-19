@@ -41,7 +41,7 @@
     "dirty-chai": "^2.0.1",
     "hat": "~0.0.3",
     "ipfs-unixfs": "^0.3.0",
-    "ipfsd-ctl": "^3.0.0",
+    "ipfsd-ctl": "github:ipfs-rust/js-ipfsd-ctl#add_rust_ipfs_http",
     "ipns": "^0.7.0",
     "is-ci": "^2.0.0",
     "is-os": "^1.0.1",
@@ -61,6 +61,7 @@
   },
   "contributors": [],
   "devDependencies": {
+    "rust-ipfs-dep": "github:ipfs-rust/npm-rust-ipfs-dep#rust-dep",
     "go-ipfs-dep": "0.4.23-3",
     "ipfs": "^0.41.0",
     "ipfs-http-client": "^42.0.0"

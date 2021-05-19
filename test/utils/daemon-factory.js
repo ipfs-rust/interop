@@ -24,5 +24,8 @@ module.exports = createFactory({
   },
   go: {
     ipfsBin: isNode ? process.env.IPFS_GO_EXEC || require('go-ipfs-dep').path.silent() : undefined
+  },
+  rust: {
+    ipfsBin: isNode ? process.env.IPFS_RUST_EXEC || require('rust-ipfs-dep').path.silent() : undefined
   }
 })
